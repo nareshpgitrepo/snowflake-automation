@@ -44,7 +44,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Upload artifact to SnowSQL
         run: |
-          ~/bin/snowsql -q 'put file://'$(pwd)'/python.py @~/${{ github.ref_name }} overwrite=true' -o friendly=false
+          ~/bin/snowsql -q 'put file://'$(pwd)'/storedproc.py @~/${{ github.ref_name }} overwrite=true' -o friendly=false
 
       - name: Create or update storedproc
         run: |
