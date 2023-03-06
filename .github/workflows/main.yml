@@ -43,7 +43,7 @@ jobs:
           ~/bin/snowsql -q 'put file://'$(pwd)'/storedproc.py @~/${{ github.ref_name }} overwrite=true' -o friendly=false
       - name: Create or update Stored PRocedure
         run: |
-          ~/bin/snowsql -q 'CREATE OR REPLACE PROCEDURE  MYPROC_test(message)
+          ~/bin/snowsql -q 'CREATE OR REPLACE PROCEDURE  MYPROC_test(message STRING)
                                         RETURNS STRING
                                         LANGUAGE PYTHON
                                         RUNTIME_VERSION = '\''3.8'\''
