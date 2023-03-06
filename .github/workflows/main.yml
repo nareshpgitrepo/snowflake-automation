@@ -50,4 +50,3 @@ jobs:
                                         PACKAGES = ('')
                                         IMPORTS = ('\''@~/${{ github.ref_name }}/storedproc.py'\'')
                                         HANDLER = '\''storedproc.run'\'';' -o friendly=false
-view rawsimple-action.yaml hosted with ❤ by GitHub
